@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<title>Menu</title>
+<link rel="stylesheet" href="menu.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<header>
+  <p>
+  <a class="link" href="registrasi.html">home</a>
+  <a class="link" href="registrasi.html">logout</a></p>
+</header>
+
+<section>
+  <nav>
+    <ul>
+	<table>
+      <li><a class="asu" href="pesan.html">PESAN</a></li>
+      <li><a class="asu" href="menu.html">MENU</a></li>
+      <li><a class="asu" href="inputdata.html">INPUT DATA</a></li>
+	  <li><a class="asu" href="account.html">ACCOUNT</a></li>
+	  </table>
+    </ul>
+  </nav>
+  <article>
+  <h2>.:: EDIT BARANG ::.</h2>
+<form action = "barang_simpan.php" method="post" enctype = "multipart/form-data">
+<input type="hidden" name="idbarang" value="<?php echo $idbarang;?>"/>
+	<table border = "1">
+		<tr>
+			<td>Nama Barang</td>
+			<td><input type = "text" name = "nama" value="<?php echo $nama;?>"></td>
+		</tr>
+		<tr>
+			<td>Harga Jual</td>
+			<td><input type = "text" name = "harga" value="<?php echo $harga;?>"></td>
+		</tr>
+		<tr>
+			<td>Stok</td>
+			<td><input type = "text" name = "stok" value="<?php echo $stok;?>"></td>
+		</tr>
+		<tr>
+			<td> Gambar [Max = 1.5MB] </td>
+			<td> 
+			<input type ="file" name = "foto">
+			<input type="hidden" name="foto_lama" value="<?php echo $foto;?>"/><br/>
+			<img src="value="<?php echo "thumb/t_".$foto;?>" width="100px"/>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type = "submit" value = "Simpan" name ="proses"/>
+			<input type = "reset" value = "Reset" name ="reset"/>
+		    </td>
+		</tr>
+	</table>
+</form>
+  </article>
+
+</section>
+
+
+
+</body>
+</html>

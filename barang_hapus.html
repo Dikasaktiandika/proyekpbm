@@ -25,35 +25,16 @@
     </ul>
   </nav>
   <article>
-  <form action="barang_tampil.php" method="post">
-  <h2>MENU MAKAN </h2>
-  <table border="1">
-	<tr>
-		<th>Foto</th>
-		<th>Nama Barang</th>
-		<th>Harga Jual</th>
-		
-		<th>Operasi</th>
-	</tr>
+	<h2>Konfirmasi Hapus</h2>
+	Nama Barang : ".$nama.<br/>
+	Harga Barang :".$harga.<br/>
+	Stok : ".$stok.<br/>
+	Foto : <img src='thumb/t_".$foto."'/><br/><br/>
+	APAKAH DATA INI AKAN DI HAPUS?<br/>
+	<a href='barang_hapus.php?idbarang=$idbarang&hapus=1'>YA</a>
+	&nbsp;&nbsp;
+	<a href='menu.html'>TIDAK</a><br/>,<br/>
 	
-			<tr>
-			<td><a href='pict/{$row['foto']}'/>
-				  <img src='thumb/t_{$row['foto']}'width='100'/>
-				  </a></td>
-			<td>".$row['nama'].</td>
-			<td>".$row['harga'].</td>
-			
-		<td>
-			
-			<a href="barang_edit.html">edit</a>
-			&nbsp;&nbsp
-			<a href="barang_hapus.html">hapus</a>
-			
-			</td>
-			</tr>
-		
-	
-	</table>
   </article>
 
 </section>
